@@ -1,0 +1,22 @@
+@JWTAuthImplementations_HostAddress = http://localhost:5037
+
+GET {{JWTAuthImplementations_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{JWTAuthImplementations_HostAddress}}/api/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "UserName": "admin",
+    "Password": "password"
+}
+
+
+###
+
+GET http://localhost:5037/api/values
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImFkZTc4ZTJjLTQzZjYtNDUwOC1iNTkwLTIyOWNiMTRjZGEyOSIsImV4cCI6MTczMzg1ODQ1MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDM3IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo1MDM3In0.bY35Kn-a4ykOWcmF5C2CLUaB8PluswOG1u36OkOoGXw
